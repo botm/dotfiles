@@ -8,6 +8,7 @@ if has('gui_running')
   set encoding=utf-8
   set guioptions-=T
   set guioptions-=m
+  set guioptions-=r
 endif
 set noerrorbells visualbell t_vb=
 if has('autocmd')
@@ -29,7 +30,7 @@ set shiftwidth=4
 set expandtab
 set wrap
 set textwidth=100
-set colorcolumn=+1
+" set colorcolumn=+1
 set clipboard=unnamed
 
 set undodir=~/.vim/tmp/undo//     " undo files
@@ -47,6 +48,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:UltiSnipsSnippetDir=['~/.vim/ultisnips']
+let g:UltiSnipsSnippetDirectories=['~/.vim/ultisnips', 'ultisnips']
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:neocomplete#enable_at_startup = 1
-
-let g:vim_markdown_math = 1
