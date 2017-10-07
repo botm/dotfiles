@@ -7,7 +7,7 @@ for_window [class="^.*"] border pixel 2
 
 # Gaps
 gaps inner 10
-gaps outer 10
+gaps outer 5
 smart_gaps on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
