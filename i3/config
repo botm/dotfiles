@@ -2,6 +2,14 @@ set $mod Mod1
 
 font pango:DejaVu Sans Mono 10
 
+# Borders
+for_window [class="^.*"] border pixel 2
+
+# Gaps
+gaps inner 10
+gaps outer 10
+smart_gaps on
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -131,5 +139,6 @@ bar {
 }
 
 # Autostart
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id VBoxClient-all
 exec --no-startup-id seafile-applet
