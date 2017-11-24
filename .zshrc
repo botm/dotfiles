@@ -10,6 +10,7 @@ bindkey -v
 
 # Aliases
 alias ls="ls --color"
+alias tldr="/home/michael/.cargo/bin/tldr"
 
 # Completion
 zstyle ':completion:*' rehash true

@@ -22,6 +22,7 @@ set laststatus=2
 set ignorecase
 set smartcase
 set incsearch
+"set hlsearch
 
 set tabstop=4
 set softtabstop=4
@@ -30,7 +31,7 @@ set expandtab
 set wrap
 set textwidth=100
 "set colorcolumn=+1
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
