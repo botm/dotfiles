@@ -1,0 +1,39 @@
+open_with
+shell pandoc swe_von_bothmer_michael_h02.md -o swe_von_bothmer_michael_h02.pdf
+open_with f
+open_with 1
+shell vim
+shell vim t
+open_with t 1
+open_with t
+shell mkdir ha3
+shell unzip LA1_03_HA_Lsg.zip -d ha3
+shell mkdir ha3abg
+shell unzip Hausaufgabe\ 03_11537.zip -d ha3abg
+shell unzip la1_telemann_kai_h03.zip
+shell unzip la1_theil_helmut_h03.zip 
+shell unzip la1_thesing_marie_h03.zip 
+shell unzip la1_timmers_kasimir_h03.zip 
+shell unzip la1_weuffel_david_h03.pdf
+shell unzip la1_weuffel_david_h03.zip
+shell mv HelloWorld.vue_ Test.vue
+search mdi
+search src
+shell mv Formfield.vue formelement.vue
+search multisel
+shell touch multiselect.scss
+open_with 
+open_with vim
+shell unzip vim-code-dark-master.zip -d vim-code-dark
+search vim
+shell mv autoload plugin
+
+search_inc dot
+q
+scout -ftsea 
+search_inc vue-mul
+shell mv Suche.vue_ Species.vue
+w
+shell mv fruit-2952791_640.jpg fruit.jpg
+scout -ftsea jjhj
+delete
