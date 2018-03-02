@@ -1,48 +1,44 @@
+# vim: set ft=config 
 [options]
 font = DejaVu Sans Mono 10
+cursor_shape = block
 
 [colors]
-foreground      = #b5b3aa
-foreground_bold = #d9d7cc
-cursor          = #d9d7cc
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
 background      = #151515
 
-# 16 color space
+# black
+color0  = #393939
+color8  = #474747
 
-# Black, Gray, Silver, White
-color0  = #000000
-color8  = #6c6c66
-color7  = #b5b3aa
-color15 = #fdfbee
+# red
+color1  = #da4939
+color9  = #ff6c5c
 
-# Red
-color1  = #ff6c60
-color9  = #ff6c60
+# green
+color2  = #9acc79
+color10 = #8fb676
 
-# Green
-color2  = #a8ff60
-color10 = #a8ff60
+# yellow
+color3  = #d0d26b
+color11 = #c8bc45
 
-# Yellow
-color3  = #ffffb6
-color11 = #ffffb6
+# blue
+color4  = #6d9cbe
+color12 = #d0d0ff
 
-# Blue
-color4  = #96cbfe
-color12 = #96cbfe
+# magenta
+color5  = #9f5079
+color13 = #a761c2
 
-# Purple
-color5  = #ff73fd
-color13 = #ff73fd
+# cyan
+color6  = #435d75
+color14 = #6e98a4
 
-# Teal
-color6  = #c6c5fe
-color14 = #c6c5fe
-
-# Extra colors
-color16 = #e9c062
-color17 = #b18a3d
-color18 = #242422
-color19 = #484844
-color20 = #918f88
-color21 = #d9d7cc
+# white
+color7  = #c2c2c2
+color15 = #c2c2c2

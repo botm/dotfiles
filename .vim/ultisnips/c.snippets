@@ -1,0 +1,71 @@
+snippet main "main"
+int main(int argc, char *argv[]) {
+	${0}
+
+	return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet inc "include"
+#include "mpi.h"
+#include <stdio.h>
+#include <string.h>
+endsnippet
+
+snippet mpii "MPI_Init()"
+MPI_Init(&argc, &argv);
+endsnippet
+
+snippet mpif "MPI_Finalize()"
+MPI_Finalize();
+endsnippet
+
+snippet mpirank "MPI_Comm_rank()"
+MPI_Comm_rank(MPI_COMM_WORLD, &${1:myrank});
+endsnippet
+
+snippet mpisize "MPI_Comm_size()"
+MPI_Comm_size(MPI_COMM_WORLD, &${1:proc_count});
+endsnippet
+
+snippet mpir "MPI_Recv()"
+MPI_Recv(${1:message}, ${2:message_size}, ${3:MPI_CHAR}, ${4:source}, ${5:tag}, MPI_COMM_WORLD,
+         MPI_STATUS_IGNORE);
+endsnippet
+
+snippet mpis "MPI_Send()"
+MPI_Send(${1:message}, ${2:message_size}, ${3:MPI_CHAR}, ${4:dest}, ${5:tag}, MPI_COMM_WORLD);
+endsnippet
+
+snippet mpib "MPI_Barrier()"
+MPI_Barrier(MPI_COMM_WORLD);
+endsnippet
+
+snippet mpit "MPI_Wtime()"
+double ${1:t0} = MPI_Wtime();
+endsnippet
+
+snippet mpibc "MPI_Bcast()"
+MPI_Bcast(${1:message}, ${2:message_size}, ${3:MPI_CHAR}, ${4:root}, MPI_COMM_WORLD);
+endsnippet
+
+snippet mpisc "MPI_Scatter() [One-To-All]"
+MPI_Scatter(${1:sendbuf}, ${2:sendcount}, ${3:MPI_INT}, ${4:recvbuf}, ${5:recvcount}, $3,
+            ${6:root}, MPI_COMM_WORLD);
+endsnippet
+
+snippet mpig "MPI_Gather() [All-To-One]"
+MPI_Gather(${1:sendbuf}, ${2:sendcount}, ${3:MPI_INT}, ${4:recvbuf}, ${5:recvcount}, $3,
+            ${6:root}, MPI_COMM_WORLD);
+endsnippet
+
+snippet mpire "MPI_Reduce() [All-To-One]"
+MPI_Reduce(${1:&sendbuf}, ${2:&recvbuf}, ${3:count}, ${4:MPI_INT}, ${5:MPI_MAX}, ${6:root}, MPI_COMM_WORLD);
+endsnippet
+
+snippet mpip "MPI_Probe() + MPI_Get_count()"
+MPI_Status status;
+MPI_Probe(${1:sender}, ${2:tag}, MPI_COMM_WORLD, &status);
+int ${3:size};
+MPI_Get_count(&status, MPI_INT, &$3);
+endsnippet
