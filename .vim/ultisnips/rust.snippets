@@ -1,0 +1,5 @@
+snippet readline "readline"
+let mut ${1:input} = String::new();
+io::stdin().read_line(&mut $1)
+    .expect("Failed to read line");
+endsnippet
