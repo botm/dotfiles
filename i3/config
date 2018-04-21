@@ -1,4 +1,5 @@
 set $mod Mod1
+set $sup Mod4
 
 font pango:DejaVu Sans Mono 10
 
@@ -29,7 +30,13 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # Start Applications Keybindings
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show drun
+
+# Switch Window
+bindsym $mod+Tab exec rofi -show window
+
+# Lock
+bindsym $sup+l exec ~/dotfiles/xlock/lock.sh
 
 # focus does not follow mouse
 focus_follows_mouse no
@@ -149,5 +156,6 @@ bar {
 
 # Autostart
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id VBoxClient-all
+# exec --no-startup-id VBoxClient-all
 exec --no-startup-id seafile-applet
+exec --no-startup-id nm-applet
