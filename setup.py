@@ -12,7 +12,8 @@ symlinks = {
     expand("~/dotfiles/.zshrc"): expand("~/.zshrc"),
     expand("~/dotfiles/ranger"): expand("~/.config/ranger"),
     expand("~/dotfiles/termite"): expand("~/.config/termite"),
-    expand("~/dotfiles/i3"): expand("~/.config/i3")
+    expand("~/dotfiles/i3"): expand("~/.config/i3"),
+    expand("~/dotfiles/i3status"): expand("~/.config/i3status")
 }
 
 for src, dst in symlinks.items():
