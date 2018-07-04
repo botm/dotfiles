@@ -155,10 +155,11 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        separator_symbol " | "
 }
 
 # Autostart
 exec --no-startup-id ~/.fehbg
-# exec --no-startup-id VBoxClient-all
+exec --no-startup-id VBoxClient-all
 exec --no-startup-id seafile-applet
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
