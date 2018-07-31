@@ -38,6 +38,9 @@ bindsym $mod+Tab exec rofi -show window
 # Lock
 bindsym $sup+l exec ~/dotfiles/xlock/lock.sh
 
+# Screenshot
+bindsym F12 exec maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
+
 # focus does not follow mouse
 focus_follows_mouse no
 
