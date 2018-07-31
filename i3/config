@@ -160,6 +160,6 @@ bar {
 
 # Autostart
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id VBoxClient-all
+# exec --no-startup-id VBoxClient-all
 exec --no-startup-id seafile-applet
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
