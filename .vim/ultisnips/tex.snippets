@@ -1,11 +1,151 @@
 # vim: set foldlevel=0:
 
+snippet "b(egin)?" "begin{} / end{}" br
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${2:htpb}]
+	\centering
+	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+	\caption{${4/(\w+)\.\w+/\u$1/}$0}
+	\label{fig:${4/(\w+)\.\w+/$1/}}
+\end{figure}
+endsnippet
+
+snippet enum "Enumerate" b
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet item "Itemize" b
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet it "Individual item" b
+\item $0
+endsnippet
+
+snippet cha "Chapter" b
+\chapter{${1:chapter name}}%
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet sec "Section"
+\section{${1:${VISUAL:section name}}}%
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet sec* "Section"
+\section*{${1:${VISUAL:section name}}}%
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet sub "Subsection"
+\subsection{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet sub* "Subsection"
+\subsection*{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet ssub "Subsubsection"
+\subsubsection{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet ssub* "Subsubsection"
+\subsubsection*{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet par "Paragraph"
+\paragraph{${1:${VISUAL:paragraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet subp "Subparagraph"
+\subparagraph{${1:${VISUAL:subparagraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+# Math 
+
 snippet "(/|frac)" "frac" r
 \frac\{${1}\}\{${2}\}
 endsnippet
 
 snippet sum "sum"
 \sum_\{${1:i=0}\}^\{${2:n}\} $0
+endsnippet
+
+snippet `8 "infty" A
+\infty
+endsnippet
+
+snippet `= "equiv" A
+\equiv
+endsnippet
+
+snippet `* "times" A
+\times
+endsnippet
+
+snippet `. "cdot" A
+\cdot
+endsnippet
+
+snippet `: "dots" A
+\dots
+endsnippet
+
+snippet `0 "emptyset" A
+\emptyset
+endsnippet
+
+snippet (( "( )" iA
+\left( $0 \right)
+endsnippet
+
+snippet {{ "{ }" iA
+\left{ $0 \right}
+endsnippet
+
+snippet [[ "[ ]" iA
+\left[ $0 \right]
+endsnippet
+
+snippet __ "_{}" iA
+_\{$0\}
+endsnippet
+
+snippet ^^ "^{}" iA
+^\{$0\}
 endsnippet
 
 # Greek
@@ -150,46 +290,3 @@ snippet `Y "Psi" A
 \Psi
 endsnippet
 
-snippet `0 "emptyset" A
-\emptyset
-endsnippet
-
-snippet `8 "infty" A
-\infty
-endsnippet
-
-snippet `= "equiv" A
-\equiv
-endsnippet
-
-snippet `* "times" A
-\times
-endsnippet
-
-snippet `. "cdot" A
-\cdot
-endsnippet
-
-snippet `: "dots" A
-\dots
-endsnippet
-
-snippet (( "( )" A
-\left( $0 \right)
-endsnippet
-
-snippet {{ "{ }" A
-\left{ $0 \right}
-endsnippet
-
-snippet [[ "[ ]" A
-\left[ $0 \right]
-endsnippet
-
-snippet __ "_{}" A
-_\{$0\}
-endsnippet
-
-snippet ^^ "^{}" A
-^\{$0\}
-endsnippet
